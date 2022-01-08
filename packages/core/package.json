@@ -1,6 +1,6 @@
 {
   "name": "core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "gitHead": "59eb7abd0ff2070656645fd7fb0b93f4107f7e1e"
+  "gitHead": "38286ceb8d21abf0451b45460b5f525f53395c53"
 }
