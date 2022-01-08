@@ -1,7 +1,7 @@
 {
-  "name": "core",
+  "name": "plugme",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc -b --clean && tsc -b tsconfig.json",
+    "build": "react-scripts build",
     "lint": "eslint --ext .ts,.tsx src/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
