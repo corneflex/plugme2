@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": [
+    "../common-components/src/**/*"
+  ],
+  "compilerOptions": {
+    
+    "outDir": "../common-components/lib",
+    "rootDir": "../common-components/src",
+    "sourceMap": true
+  }
+}

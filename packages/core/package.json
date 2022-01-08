@@ -1,7 +1,10 @@
 {
-  "name": "core",
+  "name": "@corneflex/core",
   "version": "0.0.6",
   "private": false,
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

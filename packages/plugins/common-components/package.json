@@ -1,9 +1,8 @@
 {
-  "name": "plugme",
-  "version": "0.0.6",
-  "private": true,
+  "name": "@corneflex-plugin/common-components",
+  "version": "0.0.1",
+  "private": false,
   "dependencies": {
-    "@corneflex/core" : "^0.0.6",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -19,10 +18,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc -b --clean && tsc -b tsconfig.json",
     "lint": "eslint --ext .ts,.tsx src/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -35,5 +40,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "gitHead": "f93ce287da7db2fb7bddae90a8daf85062018a55"
 }

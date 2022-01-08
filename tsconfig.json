@@ -18,7 +18,13 @@
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "isolatedModules": true,
-      "jsx": "react-jsx"
-    }
+      "jsx": "react-jsx",
+      "declarationMap": true
+    },
+    "baseUrl": "./",
+    "paths": {
+      "@corneflex/*": ["./packages/*/src"],
+      "@corneflex-plugin/*": ["./packages/plugin/*/src"],
+    },
   }
   
