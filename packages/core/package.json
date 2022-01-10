@@ -19,8 +19,12 @@
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.3"
   },
+  "files": [
+    "src",
+    "lib",
+    "README.md"
+  ],
   "scripts": {
-    "start": "react-scripts start",
     "build": "tsc -b --clean && tsc -b tsconfig.json",
     "lint": "eslint --ext .ts,.tsx src/",
     "test": "react-scripts test",

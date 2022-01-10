@@ -1,26 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { ComponentComposer } from '@corneflex/core';
+import { useFederatedComponent } from './System';
 
 function App() {
+  const [loadded, setLoaded] = useState(false);
+
+  const { Component: ComponentComposer, errorLoading } = useFederatedComponent(
+    'http://localhost:3004/remoteEntry.js',
+    'CorePlugin',
+    './Toto',
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ComponentComposer components={[]} />
-      </header>
+      <React.Suspense fallback={null}>
+        {errorLoading
+          ? null
+          : ComponentComposer && (
+              <ComponentComposer
+                components={[
+                  {
+                    plugin: {
+                      url: 'http://localhost:3003/remoteEntry.js',
+                      name: 'CommonComponents',
+                      module: './Toto',
+                      import: '@rakuten-plugin/common-components',
+                    },
+                    props: {},
+                  },
+                  {
+                    plugin: {
+                      url: 'http://localhost:3004/remoteEntry.js',
+                      name: 'CorePlugin',
+                      module: './Text',
+                      import: '@rakuten-plugin/common-components',
+                    },
+                    props: {},
+                  },
+                ]}
+              />
+            )}
+      </React.Suspense>
     </div>
   );
 }

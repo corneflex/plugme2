@@ -19,12 +19,11 @@
       "resolveJsonModule": true,
       "isolatedModules": true,
       "jsx": "react-jsx",
-      "declarationMap": true
-    },
-    "baseUrl": "./",
-    "paths": {
-      "@corneflex/*": ["./packages/*/src"],
-      "@corneflex-plugin/*": ["./packages/plugin/*/src"],
+      "declarationMap": true,
+      "baseUrl": "./",
+      "paths": {
+        "@corneflex/core": ["./packages/core/src/*"],
+        "@corneflex-plugin/common-components": ["./packages/plugins/common-components/src/*"],
+      }
     },
   }
-  
